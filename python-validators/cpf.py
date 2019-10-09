@@ -3,9 +3,7 @@ import re
 def isCpfValid(cpf):
     """ Se cpf no formato brasileiro for válido, ele retornará True, caso contrário, retornará False """
 
-    # Verifique se o tipo é string
-    if not isinstance(cpf,str):
-        return False
+    cpf = str(cpf)
 
     # Remova alguns caracteres indesejados :D
     cpf = re.sub("[^0-9]",'',cpf)
